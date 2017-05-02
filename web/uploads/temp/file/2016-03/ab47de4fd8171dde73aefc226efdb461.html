@@ -1,0 +1,249 @@
+{include file=header.html}
+<script type="text/javascript" src="{lib file=jquery1.js}"></script>
+<script type="text/javascript" src="{lib file=TouchSlide.1.1.js}" charset="utf-8"></script>
+<style type="text/css">
+/*.L_logo span{ float:left;}
+.L_logo span .span_t{ font-size:16px; font-weight:700; height:18px; line-height:18px; font-family:宋体; padding-left:5px; padding-right:5px; text-align:center;}
+.L_logo span .span_b{ color:#dc2118; background:#fff; font-size:12px; font-family:微软雅黑;height:15px; line-height:15px;text-align:center; padding-left:5px; padding-right:5px;}*/
+.L_logo_1{ float:left;  width:42px; height:46px; position:absolute;}/*background:url({res file=images/other/20150402logo_1.png}) no-repeat scroll center center / 42px 46px;*/
+.L_logo_2{ width:auto; height:37px; overflow:hidden; float:left; margin-top:9px;margin-left:16px;}
+.L_logo_2 p.span_t{ width:auto; background:#ffffff; padding-left:5px; padding-right:15px; height:22px; color:#dc2118; font-size:16px; line-height:23px; text-align:center; border-radius:0 5px 0 0;padding-left:35px;}
+.L_logo_2 p.span_b{ width:auto; background:#ff7d1e; padding-left:5px; padding-right:15px; height:15px; font-size:12px; text-align:center; line-height:15px; border-radius:0 0 5px 0;padding-left:35px;}  
+.L_logo_3{ width:7px; height:38px; overflow:hidden; float:left; margin-top:9px;background:url({res file=images/other/20150402logo_3.png}) no-repeat scroll center center / 7px 37px;}
+</style> 
+<div class="L_bannerwap" id="slideBox">
+    <div class="L_banner bd">
+         <ul>
+              <li><a href="http://mp.weixin.qq.com/s?__biz=MzA5NzEwMTU4MA==&mid=206459008&idx=1&sn=b9a305afd444c41cd65959cad5b9896b#rd"><img class="L_ggt1" src="{res file=images/banner4.jpg}" border="0" width="100%"/></a></li>
+         </ul>
+         <div class="L_logo">
+             <div class="L_logo_1"><img src="{res file=images/other/20150402logo_1.png}" border="0" width="42" height="46"/></div>
+            <div class="L_logo_2">
+            	<p class="span_t">{$store.store_name}</p>
+                <p class="span_b">{$store.region_name_qu}</p>
+            </div>
+            <!--<div class="L_logo_3"></div>-->
+         	<!--<img src="{res file=images/other/store_logo.png}" border="0" style=" width:33px; height:33px; float:left; padding-right:5px;"/>
+            <span>
+            	<p class="span_t">{$store.store_name}</p>
+                <p class="span_b">{$store.region_name_qu}</p>
+            </span>-->
+         </div>
+    </div>
+</div>
+<!--content-->
+<div class="L_cntwap">
+	<div class="L_srarchwap">
+    	<div class="L_srarch_L"><a href="{url app=store&act=search&id=$store.store_id}"></a></div><!--http://$store.domain$LS_ym/m-->
+        <div class="L_srarch_C">
+        	<div class="L_srarch_C_txt">
+                <form id="" name="" method="get" action="index.php">
+                    <input type="hidden" name="app" value="store" />
+                    <input type="hidden" name="act" value="search" />
+                    <input type="hidden" name="id" value="{$store.store_id}" />
+                    <input class="L_ind_txt1" type="text" name="keyword" />
+                    <input class="L_ind_but1" type="submit" value="" />
+                </form>
+            </div>
+        </div>
+        <div class="L_srarch_R"><a href="{url app=category}"></a></div>
+    </div>
+    <ul class="L_cont1">
+        <!--{foreach from=$searched_goods item=sgoods}-->
+    	<li>
+        	<div class="L_cont1_L"><img src="/{$sgoods.default_image}" width="75" height="75" border="0" /></div>
+            <div class="L_cont1_R">
+            	<h5>{$sgoods.goods_name|escape}</h5>
+                {if $sgoods.price1 != '0.00'}
+                	<P>{$sgoods.price1|price}<s>{$sgoods.price|price}</s></P>
+                {elseif  $sgoods.price3>0}
+                    <P>{$sgoods.price3|price}<s>{$sgoods.price|price}</s></P>
+                {else}
+                	<P>{$sgoods.price|price}</P>
+                {/if}
+                <div class="L_ind_jr" id="L_ind_{$sgoods.default_spec}"><a href="javascript:addToCart({$sgoods.default_spec});"><img src="{res file=images/other/ind_bg3.png}" width="91" height="25" border="0" /></a></div>
+            </div>
+        </li>
+        <!--{/foreach}-->
+    </ul>
+    <input type="hidden" value="{$cate_id}" id="cate_id"/>
+    <input type="hidden" value="{$keyword}" id="keyword"/>
+    
+    <div class="mw_ts" id="list-loading">正&nbsp;在&nbsp;加&nbsp;载</div>
+    <div class="mw_ts" id="list-nomore">已&nbsp;到&nbsp;尾&nbsp;页</div>
+    <div class="mw_ts" id="page" style="display:block;"><strong>+</strong>&nbsp;加&nbsp;载&nbsp;更&nbsp;多</div>
+</div>
+
+<!--<div class="L_float_wap">
+	<ul>
+    	 <li class="ls_1"><a href="{url app=cart}"><span id="carts_count">{$carts_count.quantity|default:0}</span></a></li>
+        <li class="ls_2"><a href="{url app=member}"></a></li>
+        <li class="ls_3"><a href="javascript:scrollTop();"></a></li>
+    </ul>
+</div>-->
+
+
+<script type="text/javascript">
+var columnHigth,//列高
+pageNum=1,
+totalPage= {$page_info.page_count},//总页数
+reload = true, // 是否进行再次加载
+hght = 1200;
+/**加载新页
+	 *
+	 *
+	**/
+function loadPage(){
+	
+	if( pageNum+1 <= totalPage && reload) {
+		reload = false;
+		loadData();
+	}
+	
+}
+function renderColumn(json){
+	$('#page').show();
+	$('#list-loading').hide();
+
+	var html = ''; 
+    html+='<ul class="L_cont1">';
+	for(var i = 0 ;i < json.length ; i++){
+		var ware = json[i];
+		if(ware.price1!='0.00'){
+		 var price ='<P>'+price_format(ware.price1)+'<s>'+price_format(ware.price)+'</s></P>';
+		}else if(ware.price3>0){
+		 var price ='<P>'+price_format(ware.price3)+'<s>'+price_format(ware.price)+'</s></P>';
+		}else{
+		 var price ='<P>'+price_format(ware.price)+'</P>';
+		}
+		html+='<li>';
+        html+='<div class="L_cont1_L"><img src=/'+ware.default_image+' width="75" height="75" border="0" /></div>';
+		html+='<div class="L_cont1_R">';
+        html+='<h5>'+ware.goods_name+'</h5>';
+        html+=price;
+        html+='<div class="L_ind_jr" id="L_ind_'+ware.default_spec+'"><a href="javascript:addToCart('+ware.default_spec+')"><img src="/themes/store/default/styles/default/images/other/ind_bg3.png" width="91" height="25" border="0" /></a></div>';
+        html+='</div>';
+		html+='</li>';
+	}
+	html+='</ul>';
+	$('.L_cont1:last').after(html);
+	pageNum++;
+	
+	if(pageNum >= totalPage){
+		$('#list-nomore').show();
+		$('#page').hide();
+		$('#list-loading').hide();
+	}else{
+		reload = true;
+	}
+	
+	
+}
+/**悬浮回到顶部开关
+	 *
+	 *
+	**/
+/*function operaSwitch(){
+	if( $(window).scrollTop() >= $(window).height() && totalPage > 0){
+		if($('.ls_3').css('display') != 'block' || $('#runtop').css('display') != ''){
+			$('.ls_3').show();
+		}
+	}else{
+		if($('.ls_3').css('display') != 'none'){
+			$('.ls_3').hide();
+		}
+	}
+}*/
+
+
+/**加载数据
+ *reload 重置加载次数
+*/
+function loadData(){
+	$('#page').hide();
+	$('#list-loading').show();
+	
+	var cate_id=$('#cate_id').val();
+	var keyword=$('#keyword').val();
+	
+	if(cate_id){
+	var cate_id_l=cate_id;	
+	}else{
+	var cate_id_l='';	
+	}
+	if(keyword){
+	var keyword_l=keyword;	
+	}else{
+	var keyword_l='';	
+	}
+	
+	var url = SITE_URL + '/index.php?app=store&act=search_list';
+	 $.ajax({
+		type: "GET",
+        url: url, 
+		data: {'page':pageNum+1, 'id':{$store.store_id},'cate_id':cate_id_l,'keyword':keyword_l},
+		dataType: "json",
+		success: function(data){
+			renderColumn(data);
+		}
+	 });
+}
+$(function(){
+	 $(window).scrollTop = 0;
+	 columnHigth = $('.L_cont1').eq(0).find('li').eq(0).height();
+	 $('#page').click(function(){
+			loadData();
+	  });
+	  if(totalPage==1){
+		$('#page').hide(); 
+		$('#list-nomore').show(); 
+	 }
+	  
+	  /*operaSwitch();*/
+	 $(window).scroll(function(){
+		 /*operaSwitch();*/
+			if($(this).scrollTop()/hght>=6){
+			hght += hght;
+			loadPage();
+		 }
+		});
+});
+</script>
+<script type="text/javascript">
+function addToCart(id)
+{
+    var quantity =1;
+    if (quantity == '')
+    {
+        alert(lang.input_quantity);
+        return;
+    }
+    if (parseInt(quantity) < 1)
+    {
+        alert(lang.invalid_quantity);
+        return;
+    }
+
+    add_to_cart(id, quantity,0);
+}
+
+/* add cart */
+function add_to_cart(spec_id, quantity,id)
+{
+    var url ='index.php?app=cart&act=add';
+    $.getJSON(url, {'spec_id':spec_id, 'quantity':quantity}, function(data){
+		if (data.retval!=200)
+        {
+		 $('#carts_count').html(data.retval.cart);
+		 lhFly(spec_id);
+		 /*alert(data.msg);*/
+		}else{
+		  layer.open({
+					content: data.msg,
+					btn: ['确定']
+			   });
+		}
+    });
+}
+</script>
+{include file=footer.html}

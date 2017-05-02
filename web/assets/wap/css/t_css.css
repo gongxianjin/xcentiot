@@ -1,0 +1,213 @@
+@charset "utf-8";
+/* CSS Document */
+*{ font-family:'微软雅黑','Helvetica Neue', Helvetica, Arial;}
+body,a,p{ text-decoration:none; list-style:none; padding:0; margin:0; border:0;}
+nav{ height:2.5rem;  background-color:#000; padding:0 10px;}
+nav a{
+	float:left;
+	margin: 0.5rem 0 0 0rem;
+}
+nav a span{
+	display:inline-block;
+	background-image:url(../images/returnicon.png);
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	width:1.5rem;
+	height:1.5rem;
+}
+nav span{
+	line-height: 2.5rem;
+	height:2.5rem;
+    margin: 0 auto;
+	font-size:1rem;
+	color:#fff;
+	text-align:center;
+	float:left;
+	margin-left: 31%;
+}
+
+.T_topbanner{ 
+	width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+	
+
+}
+.T_topbanner img{
+	width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.t_zhuce{
+	padding: 0 10px;
+}
+.t_zhuce .xing{
+	line-height:2.5rem;
+	font-size:1rem;
+	color:#333;
+	margin-left: 10%;
+	margin-top: 20px;
+	width:90%;
+	position:relative;
+}
+.t_zhuce input{
+	width:calc(90% - 18%);
+    height: 2.5rem;
+    border: 2px solid #ccc;
+    color: #333;
+    padding-left: 3%;
+    font-size: 1rem;
+}
+.xing span{
+	display: inline-block;
+    width: 18%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.xing strong{
+	display: inline-block;
+	background-image:url(../image/downicon.png);
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	width: 1.8rem;
+    height: 1.8rem;
+   position: absolute;
+    right: 20%;
+    top: 18px;
+    left: 80%;
+}
+.t_zhuce .downbox{
+	display:none;
+	line-height: 2.5rem;
+    width:calc(90% - 18%);
+    height: 25.6rem;
+    border: 1px solid #ccc;
+    color: #333;
+    padding-left: 3%;
+    font-size: 1rem;
+    margin: -1px 0 0 18%;
+    background-color: #f6f6f6;
+}
+.downbox p{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-bottom: 1px solid #ccc;  
+    padding: 0 0 0 3%;
+    margin-left: -4%;
+}
+
+.t_butbox{
+	padding:0 90px;
+	margin:0;
+	display:block;
+}
+.t_butbox a{
+	height: 3rem;
+    background-color: #f76300;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+	margin: 50px 0 20px 0px;
+}
+.bottom{ 
+	padding: 15px 15px;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #666;
+}
+.t_gongbu{
+	padding: 0 20px;
+}
+.t_gongbu h2{
+	color: #666;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: normal;
+	padding-left: 15%;
+}
+.t_line{
+	width: 90%;
+    background-color: #ccc;
+    height: 0.1rem;
+    margin: 5% 5% 0 5%;
+}
+.t_box{
+	width: 90%;
+    margin: 20% 5% 0 5%;
+    height: 8rem;
+    border: 1px solid #ccc;
+}
+.t_box .t_tittle{
+	width: 45%;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: #fff;
+    color: #333;
+    font-size: 1.5rem;
+    margin: -5% auto 0 auto;
+    text-align: center;
+}
+.t_hao{
+	line-height: 6rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #000;
+}
+
+.main_image {width:100%; height:100%; overflow:hidden; margin:0 auto; position:relative}
+.main_image ul {width:9999px; height:422px; overflow:hidden; position:absolute; top:0; left:0}
+.main_image li {float:left; width:100%; height:188px;}
+.main_image li span {display:block; width:100%; height:auto;overflow: hidden;text-align: center}
+.main_image li a {display:block; width:100%; height:188px}
+div.flicking_con {width:100%; margin:0 auto; position:relative}
+div.flicking_con .flicking_inner {position:absolute; top:150px; left:0; z-index:999; width:100%; height:21px;text-align: center;} /* 121126 */
+div.flicking_con a {width:11px; height:11px; margin:5px; padding:0; display:inline-block; font-size: 0;background: #fff;border-radius: 50%}
+div.flicking_con a.on {background:#ff6699;}
+
+.T_topbanner {
+    width: 100%;
+    height: 188px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+
+
+/*样式修改*/
+.z-zeng{display: inline-block;background: #eab228;color: #fff;
+    width: 23px;height: 20px;line-height: 20px;text-align: center;border-radius: 2px;float: left;margin-right: 10px;font-family: "宋体"; font-size: 10px;}
+.z-zengtext{color: #d45766;}
+.z-checkbox{display: inline-block;width: 18px;height: 18px;border:1px solid #d0bb4c;margin-right: 12px;float: left;}
+.z-checkbox input{display: none;}
+.z-checkboxs{color: #8e8c8d;font-size: 10px;}
+.z-zengtext2{border-bottom:1px solid #dfdfdf;color: #8e8c8d;font-size: 10px;padding-bottom: 5px;display: inline-block;width: 80%;}
+.hb_collect_img{position: relative;}
+.z-zeng2{position: absolute;left: 0; top: 0;}
+.z-dcc{position: fixed; left: 0;top: 0;width: 100%;height: 100%;background: #000;background: rgba(0,0,0,0.6); z-index: 99999;display: none;}
+.z-dcccon{background: #fff;background: rgba(255,255,255,0.9);width: 220px;height: 50px;position: absolute;top: 50%;left: 50%;margin: -90px 0 0 -110px;border-radius: 10px;text-align: center;line-height: 15px;padding-top: 8px;}
+.z-dcccon dl span.z-dcc1{color: #a3a3a3;}
+.z-dcccon dl span.z-dcc2{color: #a3a3a3;padding: 0 10px;}
+
+
+/*登录*/
+.hc_content{background:#fff; padding:2em;}
+.hc_login_box{margin-bottom:1.5em;}
+.hc_login_i.i1{background-position:-21px top;}
+.hc_login_in{width:88%; box-sizing:border-box; height:30px; line-height:30px; padding:0 .3em; border:none; border-bottom:1px solid #F0F0F0;}
+.hc_login_in.wrong{border-bottom-color:#D95555;}
+.hc_login_tip{line-height:24px; padding-left:2em; box-sizing:border-box; display:none;}
+.hc_login_sub{display:block; height:30px; line-height:30px; text-align:center; color:#fff; font-size:16px; background:#C60001; border-radius:5px; margin-top:2em;}
+.hc_addr_list{padding:.5em; border:1px solid #E6E6E6; border-bottom:none; background:#fff; box-sizing:border-box;}
+.hc_addr_list li{border-bottom:1px solid #E6E6E6; padding:1em .5em;box-sizing:border-box; overflow:hidden;}
+.hc_addr_p{display:block; width:70%;}
+.hc_addr_p span{margin-right:.5em;}
+.hc_addr_r a{display:block; color:#3769CD;}
+.hc_addr_more{display:block; width:60%; height:30px; border:1px solid #E6E6E6; background:#fff; line-height:30px; text-align:center; margin:auto; margin-top:2em; font-size:16px;}
+
+
+
+

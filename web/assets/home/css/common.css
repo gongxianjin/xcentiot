@@ -1,0 +1,221 @@
+﻿* {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+
+a,
+a:focus,
+a:visited {
+	outline: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.w3 {
+	width: 33.33%;
+}
+
+.part-margin {
+	margin-bottom: 20px;
+}
+
+.inner {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.margin-none {
+	margin: 0;
+}
+
+header,
+#content {
+	min-width: 1100px;
+}
+
+
+/*-------------------------------右浮-------------------------------------------------*/
+
+.layout .img-part {
+	float: right;
+}
+
+.layout .text-part {
+	float: left;
+}
+
+
+/*-------------------------------hardware/aged banner---------------------------------*/
+
+.mag-banner {
+	width: 100%;
+	/*height:600px;*/
+	position: relative;
+}
+
+.mag-banner img.banner-img-size {
+	width: 100%;
+}
+
+.banner-img {
+	width: 100%;
+	/*max-height: 600px;*/
+	z-index: -1;
+}
+
+.mag-feature {
+	width: 35%;
+	opacity: 0.3;
+	background: #000000;
+	height: 220px;
+	position: absolute;
+	bottom: 0px;
+	left: 17%;
+	padding: 34px 5% 0;
+	cursor: pointer;
+}
+
+#portable .mag-feature,
+#wearable .mag-feature,
+#independent .mag-feature,
+#center .mag-feature,
+#club .mag-feature,
+#healthy .mag-feature {
+	position: absolute;
+	bottom: 0;
+	left: 53.1%;
+	padding: 16px 2% 0;
+}
+
+.right-quote {
+	text-align: right;
+}
+
+.feature {
+	font-size: 32px;
+	color: #ffffff;
+	letter-spacing: 4px;
+	line-height: 60px;
+	text-align: left;
+	margin-left: 7%;
+	display: inline-block;
+}
+
+#wearable .mag-feature,
+#club .mag-feature,
+#advice .mag-feature {
+	width: 100%;
+	height: 120px;
+	background: #000000;
+	opacity: 0.5;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	cursor: pointer;
+}
+
+#wearable .left-quote,
+#club .left-quote,
+#advice .left-quote {
+	text-align: left;
+}
+
+#wearable .right-quote,
+#club .right-quote,
+#advice .right-quote {
+	text-align: right;
+}
+
+#wearable .feature,
+#club .feature,
+#advice .feature {
+	font-size: 28px;
+	color: #ffffff;
+	letter-spacing: 3.5px;
+	text-align: center;
+	line-height: normal;
+}
+
+
+/*--------------------------------hardware/aged 标题/index------------------------------------*/
+
+#product .inner,
+#case .inner,
+#wearable .seven-protect,
+.health-record .inner,
+#independent .core-function,
+#club .nurse-service .inner,
+#advice .advice-service,
+#index .why-choice,
+#index .smart,
+#mobile .living-service,
+#healthy .mag-content,
+#intelligent .mag-content {
+	padding-top: 41px;
+}
+
+#product .inner .title,
+#case .inner .title,
+#wearable .title,
+#independent .title,
+#club .nurse-service .title,
+#advice .advice-service .title,
+#index .why-choice .title,
+#index .smart .title,
+#mobile .living-service .title,
+#healthy .mag-content .title,
+#intelligent .mag-content .title,
+#intelligent .title {
+	width: 100%;
+	border-bottom: 1px solid #c1c1c1;
+	text-align: center;
+}
+
+#product .inner .title h3,
+#case .inner .title h3,
+#wearable .title h3,
+#independent .title h3,
+#club .title h3,
+#advice .title h3,
+#join .title h3,
+#index .why-choice .title h3,
+#index .smart .title h3,
+#mobile .living-service .title h3,
+#healthy .mag-content .title h3,
+#intelligent .mag-content .title h3 {
+	font-size: 22px;
+	color: #2b3140;
+	letter-spacing: 2.75px;
+	/*border-bottom: 3px solid #1bb4e5;*/
+	/*width:197px;*/
+	padding: 0 15px;
+	padding-bottom: 11px;
+	margin: 0;
+	display: inline-block;
+}
+
+
+/*----------------------------------字体----------------------------------------------------*/
+
+

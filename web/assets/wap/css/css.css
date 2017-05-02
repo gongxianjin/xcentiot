@@ -1,0 +1,258 @@
+@charset "utf-8";
+/* CSS Document */
+/*index-css*/
+
+a,img { -webkit-tap-highlight-color:transparent; }
+
+*{ font-family:'微软雅黑','Helvetica Neue', Helvetica, Arial, ; text-decoration:none; list-style:none; padding:0; margin:0; border:0;}
+nav{ height:2.5rem; width:100%; background-color:#875baf; position:fixed; top:0; z-index:3;}
+nav div{
+	line-height: 2.5rem;
+    width: 200px;
+    margin: 0 auto;
+	font-size:1.2rem;
+	color:#fff;
+	text-align:center;
+}
+.T_topbanner{ width:100%;height:188px; overflow:hidden; font-size:0; margin-top:2.5rem;}
+.T_topbanner ul{
+    width: 6080px;
+    display: block;
+    height: 188px;
+    position: relative;
+    overflow: hidden;
+}
+.T_topbanner ul li{
+	float:left;
+	height:188px;
+	display:block;    
+	overflow: hidden;
+    position: relative;
+}
+.T_topbanner ul li img{ width:380px; height:188px;}
+.T_topbanner ol{ 
+	width: 72px;
+    height: 15px;
+	display: block;
+    list-style: none;
+	margin:0 auto;
+    position: relative;
+    top: -15px;
+}
+.T_topbanner ol li{ 
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6699;
+    border-radius: 20px;
+    float: left;
+    margin-right: 8px;
+}
+.T_kc{height:2.5rem; width:100%; background-color:#fafafa;margin-top:8px;}
+.T_kc span{ display:block; width:8px; height:2.5rem;background-color:#875baf;float:left;}
+.T_kc b{
+	font-size: 1.2rem;
+    line-height: 2.5rem;
+    color: #000;
+    float: left;
+    list-style: none;
+    font-weight: normal;
+    padding-left: 10px;
+}
+.T_conbanner{ width:100%; height:auto; font-size:0;}
+.T_conbanner img {
+	width: 100%;
+    height: auto;
+    margin-top: 8px;
+    border:none;
+    padding: 0;
+}
+.T_teacher{ width:100%; height:auto;}
+.T_teacher li{ 
+	width:100%;    
+    height: auto;
+    padding: 0% 0 32% 0;
+	background-color:#fafafa;
+	margin: 8px 0 0 0px;
+	 }
+.T_teacher li .T_timg{
+	width: 24%;
+    height: auto;
+    float: left;
+    padding: 0 0 0 10px;
+	margin: 0;
+    border: 0;
+	
+}
+.T_teacher li .T_timg img{
+	 width:100%;
+	 height:auto;
+	 margin: 0;
+     border:none;
+	 
+}
+.T_teacher li .T_text{ width: calc(100% - 24% - 20px);float:left; padding: 0 0 0 10px;}
+.T_teacher li .T_text h4{ color:#4d4d4d; line-height:1.5rem;}
+.T_teacher li .T_text h3{ color:#ff872f; line-height:2rem;}
+.T_contant{
+	font-size: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+}
+.T_contant img{ width:100%; height:auto;}
+.T_banner9{ 
+    width: 100%;
+    height:3.5rem;
+	background-color:#000;
+	 background-color:rgba(0,0,0,0.5);
+	font-size:0;
+}
+.T_banner9 a{
+	background-image:url(../image/bottomicon.png);
+	display: inline-block; 
+    width: 25%;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-size: 80px auto;
+    
+}
+.T_banner9 a:before{ text-align:center; display:block;}
+.T_banner9 a:hover{ background-color:#875baf;}
+.T_shouye{ 
+	background-position:center -5px;
+}
+.T_teachr{ 
+	background-position: center -86px;	
+}
+.T_class{ 
+	background-position: center -170px;
+}
+.T_contact{ 	
+	background-position:center -257px;
+}
+
+
+/*teacherY-css*/
+.T_lsicon{
+	 background-image: url(../image/T_ls.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 7rem;
+    height: 2rem;
+	margin-top:8px;
+}
+.T_dottbox{
+	margin: 0 10px 0 10px;
+    height: auto;
+    border: dotted 1px #875baf;
+	margin-top:8px;
+}
+.T_dottbox .T_huibox{
+	margin: 5px 5px;
+    height: auto;
+    background-color: #f2f2f2;
+    color: #4d4d4d;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+.T_context{ 
+    color: #4d4d4d;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    padding: 8px 8px 8px 8px;
+}
+.T_context b{ 
+    color: #875baf; 
+	
+}
+/*classJ-css*/
+.T_keicon{
+	background-image: url(../image/T_kc.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 7rem;
+    height: 2rem;
+	margin-top:8px;
+}
+.T_bordbox1{
+	margin: 0 10px 0 10px;
+    height: auto;
+    border: solid 3px #333;
+	margin-top:8px;
+}
+.T_bordbox1 .T_bordbox2{
+	margin: 5px 5px;
+    height: auto;
+	border: solid 1px #000;
+    background-color:#f2f2f2;
+    color: #4d4d4d;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+.T_topclbanner{height:188px; overflow:hidden; font-size:0;}
+.T_topclbanner ul{
+	width:100%;
+    padding:10px 10px;
+    display: block;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+	background-color:#e5e5e5;
+	float:left;
+}
+.T_topclbanner ul li{
+	width: 29%;
+    float: left;
+    height: auto;
+    display: block;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+	 text-align:center;
+
+}
+.T_topclbanner ul li div{
+	float: left;
+    height: auto;
+    padding: 2px 2px; 
+}
+.T_topclbanner ul li img{ text-align:center; width:100%; height:100%;}
+.T_topclbanner ol{
+	width: 54px;
+    height: 15px;
+	display: block;
+    list-style: none;
+	margin:0 auto;
+    position: relative;
+    top: -20px;
+}
+.T_topclbanner ol li{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6699;
+    border-radius: 20px;
+    float: left;
+    margin-right: 8px;
+}
+
+/*contact-css*/
+
+.T_conbox{
+	margin: 0 10px 0 10px;
+    height: auto;
+    border: solid 1px #ccc;
+	margin-top:8px;
+	background-color:#fafafa;
+}
+.main_image {width:100%; height:188px; border-top:1px solid #d7d7d7; overflow:hidden; margin:0 auto; position:relative}
+.main_image ul {width:9999px; height:422px; overflow:hidden; position:absolute; top:0; left:0}
+.main_image li {float:left; width:100%; height:188px;}
+.main_image li span {display:block; width:100%; height:188px;overflow: hidden;text-align: center}
+.main_image li a {display:block; width:100%; height:188px}
+div.flicking_con {width:100%; margin:0 auto; position:relative}
+div.flicking_con .flicking_inner {position:absolute; top:150px; left:0; z-index:999; width:100%; height:21px;text-align: center;} /* 121126 */
+div.flicking_con a {width:11px; height:11px; margin:5px; padding:0; display:inline-block; font-size: 0;background: #fff;border-radius: 50%}
+div.flicking_con a.on {background:#ff6699;}

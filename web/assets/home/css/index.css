@@ -1,0 +1,222 @@
+﻿/*---------------  smart  -------------------*/
+
+#index {
+	background-color: #F6F6F6;
+	-moz-background-color: #F6F6F6;
+}
+
+.inner {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.carousel-indicators {
+	/*background: rgba(0, 0, 0, 0.20);*/
+	border-radius: 2px;
+	width: 204px;
+	height: 16px;
+	line-height: 0px;
+	margin: 0 auto;
+	margin-left: -102px;
+}
+
+.carousel-indicators li {
+	height: 10px;
+	margin: 0;
+	background-color: inherit;
+}
+
+.carousel-indicators li span {
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.60);
+}
+
+.carousel-indicators .active {
+	background-color: inherit;
+	margin: 0px;
+	height: 10px;
+	line-height: 0px;
+}
+
+.carousel-indicators .active span {
+	background-color: white;
+	margin: 0px;
+	height: 2px;
+	line-height: 0px;
+}
+
+#index .body {}
+
+#index .body img {
+	width: 100%;
+}
+
+#index .left {
+	width: 457px;
+	/*height: 540px;*/
+	height: 510px;
+	float: left;
+	background: url(../images/security.jpg) center center no-repeat;
+	background-size: 100%;
+}
+
+#index .left img:hover {
+	background: url(../images/security.jpg) center center no-repeat;
+	background-size: 110%;
+}
+
+#index .right {
+	width: 640px;
+	float: right;
+}
+
+#index .right .top {
+	/*height: 354px;*/
+	height: 350px;
+	margin-bottom: 4px;
+	background: url(../images/door-open.jpg) center center no-repeat;
+	background-size: 100%;
+}
+
+#index .right .bottom {
+	/*height: 180.2px;*/
+	height: 156.2px;
+}
+
+#index .right .bottom .left1 {
+	width: 320px;
+	/*height: 180.2px;*/
+	height: 156.2px;
+	float: left;
+	background: url(../images/light-off-bg.jpg) center center no-repeat;
+	background-size: 100%;
+}
+
+#index .right .bottom .right1 {
+	width: 320px;
+	/*height: 180.2px;*/
+	height: 156.2px;
+	float: right;
+	background: url(../images/curtain-open-bg.jpg) center center no-repeat;
+	background-size: 100%;
+}
+
+.hover-active {
+	position: relative;
+	cursor: pointer;
+	transition: All 0.4s ease-in-out;
+	-webkit-transition: All 0.4s ease-in-out;
+	-moz-transition: All 0.4s ease-in-out;
+	-o-transition: All 0.4s ease-in-out;
+}
+
+.hover-active .info {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	color: #FFFFFF;
+	line-height: 60px;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -20;
+}
+
+.active .info {
+	opacity: 1;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	color: #FFFFFF;
+	line-height: 60px;
+	font-size: 14px;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -20;
+}
+
+.active:hover,
+.hover-active:hover {
+	transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	-moz-transform: scale(0.98);
+	-o-transform: scale(0.98);
+	-ms-transform: scale(0.98);
+}
+
+.hover-active:hover .info,
+.active .info {
+	display: block;
+	opacity: 1;
+	animation: fadeInUp 0.4s infinite;
+	-webkit-animation: fadeInUp 0.4s infinite;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+}
+
+.hover-active .mask-div {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hover-active:hover .mask-div,
+.active .mask-div {
+	background-color: initial;
+	opacity: 0;
+	animation: fadeIn 0.4s infinite;
+	-webkit-animation: fadeIn 0.4s infinite;
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		bottom: -0px;
+	}
+	100% {
+		opacity: 1;
+		bottom: 0px;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		bottom: -0px;
+	}
+	100% {
+		opacity: 1;
+		bottom: 0px;
+	}
+}
